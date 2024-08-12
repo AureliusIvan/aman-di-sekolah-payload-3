@@ -1,6 +1,6 @@
 import path from 'path'
 // import { postgresAdapter } from '@payloadcms/db-postgres'
-import { en } from 'payload/i18n/en'
+import {en} from 'payload/i18n/en'
 import {
   AlignFeature,
   BlockquoteFeature,
@@ -20,10 +20,10 @@ import {
   UploadFeature,
 } from '@payloadcms/richtext-lexical'
 //import { slateEditor } from '@payloadcms/richtext-slate'
-import { mongooseAdapter } from '@payloadcms/db-mongodb'
-import { buildConfig } from 'payload'
+import {mongooseAdapter} from '@payloadcms/db-mongodb'
+import {buildConfig} from 'payload'
 import sharp from 'sharp'
-import { fileURLToPath } from 'url'
+import {fileURLToPath} from 'url'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -86,13 +86,13 @@ export default buildConfig({
    * This is completely optional and will default to English if not provided
    */
   i18n: {
-    supportedLanguages: { en },
+    supportedLanguages: {en},
   },
 
   admin: {
     autoLogin: {
       email: 'dev@payloadcms.com',
-      password: 'test',
+      password: 'admin',
       prefillOnly: true,
     },
   },
